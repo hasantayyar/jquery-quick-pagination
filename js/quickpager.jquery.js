@@ -25,7 +25,7 @@
             if (pageCounter <= 1) {
                 return;
             }
-            var pageNav = "<ul class='simplePagerNav'>";
+            var pageNav = "<div class='row' style='clear:both'><ul class='pagination'>";
             for (i = 1; i <= pageCounter; i++) {
                 if (i == options.currentPage) {
                     pageNav += "<li class='currentPage simplePageNav" + i + "'><a rel='" + i + "' href='#'>" + i + "</a></li>";
@@ -33,7 +33,7 @@
                     pageNav += "<li class='simplePageNav" + i + "'><a rel='" + i + "' href='#'>" + i + "</a></li>";
                 }
             }
-            pageNav += "</ul>";
+            pageNav += "</ul></div>";
             if (!options.holder) {
                 switch (options.pagerLocation) {
                 case "before":
